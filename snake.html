@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/snake.css" />    
+</head>
+<body>
+
+    <div>
+        <div id="divScore">
+            <input id="btnStart" type="button" value="START" /> &nbsp;&nbsp;&nbsp;
+            <small>Score:</small><b><span id="spnScore">0</span></b> <small>pt</small> &nbsp;&nbsp;&nbsp;
+            <small>Time:</small><b><span id="spnTime">0</span></b> <small>sec</small><br />
+        </div>
+        
+        <div id="divContainer"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="script/snake.config.js" type="text/javascript"></script>
+    <script src="script/snake.core.js" type="text/javascript"></script>
+    <script src="script/snake.helper.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var config = new Config();
+            var snake = new Snake(config);
+
+            //add eventlistener for start button click
+            $("#btnStart").on("click", function () {
+                var boxPerRow = 10;
+                snake.Start(boxPerRow);
+            });
+
+            //add eventlistener for keyboard events
+            $(window).on("keydown", function (e) {
+                var key = e.keyCode ? e.keyCode : e.which;
+                snake.KeyDown(key);
+            });            
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+﻿html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex: 1;
+    background: orange;
+    justify-content: center;
+    align-items: center;
+}
+
+#divScore
+{
+    box-sizing:border-box;
+    padding:5px;
+    background:pink;
+    display:inline-block;
+    width:311px;
+    border:5px double gray;
+    border-bottom:0px
+}
+
+#divScore span
+{
+    font-size:1.5em;
+    font-weight:bold;
+    color:red;
+}
+
+#divContainer
+{
+    box-sizing:content-box;
+    border:5px double gray;
+    width:301px;
+    height:301px;
+    background:#EBEFF1;
+}
+
+#divContainer div
+{
+    float:left;
+    width:30px;
+    height:30px;
+    background:#EBEFF1;
+    border-right:1px solid #C7CACC;
+    border-bottom:1px solid #C7CACC;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-align:center;
+}
+
+
+#divContainer div.fruit
+{
+    background-image:url('../images/fruit.png');
+    background-size:cover
+}
+
+#divContainer div.snakeCell
+{
+    background-image:url('../images/cell.png');
+    background-size:cover
+}
+
+#divContainer div.head
+{
+    background-image:url('../images/head.png');
+    background-size:cover
+}
+
+
+input[type=button] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius:4px;
+}
+
+input[type=button]:hover {
+    background-color: #ff0000; 
+    cursor:grab;   
+}
+
+.clear
+{
+    clear:both;            
+    display:none
+}
